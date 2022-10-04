@@ -12,12 +12,9 @@ public class StationServiceImpl implements Serializable {
 
     private final StationRepository stationRepository;
 
-
     public StationServiceImpl(StationRepository stationRepository) {
         this.stationRepository = stationRepository;
     }
-
-
     public List<Station> findAll(){
         return stationRepository.findAll();
     }

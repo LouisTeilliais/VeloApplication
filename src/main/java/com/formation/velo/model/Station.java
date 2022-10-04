@@ -60,6 +60,7 @@ public class Station implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, lattitude, longitude, Status, address, bike_stands, available_bikes, available_bike_stands, recordid);
+        return Objects.hash(id, name, lattitude, longitude, Status,
+                            address, bike_stands, available_bikes, available_bike_stands, recordid);
     }
 }
