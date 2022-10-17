@@ -1,6 +1,6 @@
-# Bike in Nantes 🇫🇷 🚲
+# Nantes's Bikes 🇫🇷 🚲
 
-## This is a little application to see the bike stations "Bicloo" availaible in Nantes.
+## This is a little mobile application to see the bike stations "Bicloo" availaible in Nantes.
 
 
 ✨ Features ✨ : 
