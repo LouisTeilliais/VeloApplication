@@ -1,7 +1,9 @@
 package com.formation.velo;
 
 import com.formation.velo.controllers.UserController;
+import com.formation.velo.model.Station;
 import com.formation.velo.model.User;
+import com.formation.velo.service.StationService;
 import com.formation.velo.service.UserService;
 import org.hamcrest.Matchers;
 import org.junit.Before;
@@ -30,7 +32,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = VeloApplication.class)
+@SpringBootTest(classes = Application.class)
 @Sql({"classpath:data.sql"})
 @Profile(value = "test")
 @AutoConfigureMockMvc
@@ -41,7 +43,8 @@ public class VeloApplicationTI {
 
     @Autowired
     private  UserService userService;
-
+    @Autowired
+    private StationService stationService;
 
     private MockMvc mockMvc;
 
@@ -170,4 +173,15 @@ public class VeloApplicationTI {
         assertEquals(2, peopleAfterDelete.size());
     }
 
+    @Test
+    public void save_get_station_return_station_success(){
+
+        Station station = Station.builder().recordId("id").name("test station").build();
+        stationService.add(station);
+
+        Optional<Station> optionalStation = stationService.findByRecordId("id");
+        assertNotNull(optionalStation);
+        assertEquals("test station", optionalStation.get().getName());
+
+    }
 }
