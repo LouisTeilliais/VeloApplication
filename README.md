@@ -10,4 +10,3 @@
 - See the station state ( OPEN 🟢 / CLOSED 🔴).
 - See the station address. 📍
 - Visualization on Google Maps. 🗺️ 
-- test
