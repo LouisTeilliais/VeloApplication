@@ -13,7 +13,7 @@ import java.util.Objects;
 @Setter
 @Entity
 
-@Table(name = "station")
+@Table(name = "stations")
 public class Station implements Serializable {
 
     @Id
