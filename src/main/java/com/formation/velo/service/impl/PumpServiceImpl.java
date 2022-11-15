@@ -66,6 +66,7 @@ public class PumpServiceImpl implements PumpService {
 
             assert openDataPump != null;
             Arrays.stream(openDataPump.getRecords()).forEach(record -> {
+                log.info(record.toString());
                 Optional<Pump> pump = findByRecordId(record.getRecordId());
                 if(pump.isPresent()) {
                     pump.get().setLongitude(record.getField().getPosition()[1]);
