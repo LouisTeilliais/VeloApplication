@@ -84,7 +84,6 @@ public class PumpServiceImpl implements PumpService {
                             .prix_maj(record.getField().getUpdatePrice())
                             .adresse(record.getField().getAdress())
                             .ville(record.getField().getCity())
-                            .services_service(record.getField().getServicesService())
                             .horaires_automate(record.getField().getHorairesAutomate24_24())
                             .cp(record.getField().getCp())
                             .carburant(record.getField().getCarburant())

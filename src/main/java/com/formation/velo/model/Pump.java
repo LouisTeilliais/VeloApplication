@@ -25,7 +25,6 @@ public class Pump implements Serializable {
     private int Id;
 
     private String ville;
-    private String services_service;
     private String horaires_automate;
     private Date prix_maj;
     private String adresse;

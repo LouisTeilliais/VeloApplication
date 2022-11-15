@@ -14,8 +14,6 @@ public class Field {
     private String city;
     @SerializedName("prix_nom")
     private String carburant;
-    @SerializedName("services_service")
-    private String servicesService;
     @SerializedName("horaires_automate_24_24")
     private String horairesAutomate24_24;
     @SerializedName("prix_maj")
