@@ -1,7 +1,7 @@
 package com.formation.velo.service.impl;
 
 import com.formation.velo.api.client.velo.OpenData;
-import com.formation.velo.api.client.velo.OpenDateNantesClient;
+import com.formation.velo.api.client.velo.OpenDateNantesVeloClient;
 import com.formation.velo.model.Station;
 import com.formation.velo.repository.StationRepository;
 import com.formation.velo.service.StationService;
@@ -46,7 +46,7 @@ public class StationServiceImpl implements StationService {
         Retrofit retrofit = new Retrofit.Builder().baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create()).
                 build();
-        OpenDateNantesClient client = retrofit.create(OpenDateNantesClient.class);
+        OpenDateNantesVeloClient client = retrofit.create(OpenDateNantesVeloClient.class);
         Call<OpenData> openDataNantesCall = client.getData();
 
         try {

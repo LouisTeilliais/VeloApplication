@@ -1,5 +1,6 @@
 package com.formation.velo.api.client.velo;
 
+import com.formation.velo.api.client.Record;
 import lombok.Getter;
 import lombok.Setter;
 @Getter

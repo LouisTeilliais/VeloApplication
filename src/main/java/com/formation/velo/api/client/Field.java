@@ -1,4 +1,4 @@
-package com.formation.velo.api.client.pump;
+package com.formation.velo.api.client;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
@@ -28,4 +28,20 @@ public class Field {
     private double prix;
     @SerializedName("postal_code")
     private String cp;
+
+
+    @SerializedName("available_bike_stands")
+    private Integer availableBikeStands;
+    @SerializedName("available_bikes")
+    private Integer availableBikes;
+    @SerializedName("bike_stands")
+    private Integer bikeStands;
+    private Integer number;
+    private String address;
+    private String name;
+    private String status;
+    @SerializedName("position")
+    private double[] positionVelo;
+
+
 }

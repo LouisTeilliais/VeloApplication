@@ -1,7 +1,7 @@
 package com.formation.velo.service.impl;
 
 import com.formation.velo.api.client.pump.OpenData;
-import com.formation.velo.api.client.pump.OpenDataNantesClient;
+import com.formation.velo.api.client.pump.OpenDataNantesPumpClient;
 import com.formation.velo.model.Pump;
 import com.formation.velo.repository.PumpRepository;
 import com.formation.velo.service.PumpService;
@@ -58,7 +58,7 @@ public class PumpServiceImpl implements PumpService {
                 .create();
         Retrofit retrofit = new Retrofit.Builder().baseUrl(urlBase).addConverterFactory(GsonConverterFactory.create(gson)).build();
 
-        OpenDataNantesClient client = retrofit.create(OpenDataNantesClient.class);
+        OpenDataNantesPumpClient client = retrofit.create(OpenDataNantesPumpClient.class);
         Call<OpenData> openDataPumpNantesCall = client.getData();
 
         try {
