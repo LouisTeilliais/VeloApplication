@@ -63,8 +63,8 @@ public class StationServiceImpl implements StationService {
                     station.get().setAvailableBikes(record.getField().getAvailableBikes());
                     station.get().setBikeStands(record.getField().getBikeStands());
                     // position
-                    station.get().setLattitude(record.getField().getPosition()[0]);
-                    station.get().setLongitude(record.getField().getPosition()[1]);
+                    station.get().setLattitude(record.getField().getPositionVelo()[0]);
+                    station.get().setLongitude(record.getField().getPositionVelo()[1]);
 
                     add(station.get());
 
@@ -77,8 +77,8 @@ public class StationServiceImpl implements StationService {
                             .availableBikes(record.getField().getAvailableBikes())
                             .availableBikeStands(record.getField().getAvailableBikeStands())
                             .bikeStands(record.getField().getBikeStands())
-                            .lattitude(record.getField().getPosition()[0])
-                            .longitude(record.getField().getPosition()[1])
+                            .lattitude(record.getField().getPositionVelo()[0])
+                            .longitude(record.getField().getPositionVelo()[1])
                             .build();
 
                     add(newStation);

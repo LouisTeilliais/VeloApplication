@@ -77,8 +77,8 @@ public class PumpServiceImpl implements PumpService {
                 } else {
                     Pump newPump = Pump.builder()
                             .recordId(record.getRecordId())
-                            .longitude(record.getField().getPositionVelo()[1])
-                            .latitude(record.getField().getPositionVelo()[0])
+                            .longitude(record.getField().getPosition()[1])
+                            .latitude(record.getField().getPosition()[0])
                             .prix(record.getField().getPrix())
                             .prix_maj(record.getField().getUpdatePrice())
                             .adresse(record.getField().getAdress())
@@ -89,6 +89,7 @@ public class PumpServiceImpl implements PumpService {
                             .build();
 
                     add(newPump);
+                    log.info(newPump.toString());
                 }
             });
         } catch(IOException e) {
