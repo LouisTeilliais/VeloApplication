@@ -55,6 +55,7 @@ public class StationServiceImpl implements StationService {
 
             assert openDataNantes != null;
             Arrays.stream(openDataNantes.getRecords()).forEach(record -> {
+                log.info(record.toString());
                 Optional<Station> station = findByRecordId(record.getRecordId());
                 if (station.isPresent()){
                     // on update la station
