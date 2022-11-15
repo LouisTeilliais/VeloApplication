@@ -8,7 +8,6 @@ import java.util.Optional;
 public interface StationService {
 
     List<Station> findAll();
-
     Station add(Station station);
     Optional<Station> findById(Integer id);
     void getDatas();

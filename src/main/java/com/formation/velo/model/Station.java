@@ -15,11 +15,11 @@ import java.util.Objects;
 
 @Table(name = "station")
 public class Station implements Serializable {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+
     // Index [0]
     private Double lattitude;
     // Index [1]

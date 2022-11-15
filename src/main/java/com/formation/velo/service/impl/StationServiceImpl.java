@@ -1,7 +1,7 @@
 package com.formation.velo.service.impl;
 
-import com.formation.velo.api.OpenData;
-import com.formation.velo.api.client.OpenDateNantesClient;
+import com.formation.velo.api.client.velo.OpenData;
+import com.formation.velo.api.client.velo.OpenDateNantesClient;
 import com.formation.velo.model.Station;
 import com.formation.velo.repository.StationRepository;
 import com.formation.velo.service.StationService;
@@ -53,6 +53,7 @@ public class StationServiceImpl implements StationService {
             // save datas in station
             OpenData openDataNantes = openDataNantesCall.execute().body();
 
+            assert openDataNantes != null;
             Arrays.stream(openDataNantes.getRecords()).forEach(record -> {
                 Optional<Station> station = findByRecordId(record.getRecordId());
                 if (station.isPresent()){
