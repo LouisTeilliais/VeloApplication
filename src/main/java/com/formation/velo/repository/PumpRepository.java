@@ -8,6 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface PumpRepository extends JpaRepository<Pump, Integer> {
-
     Optional<Pump> findByRecordId(String recordId);
 }

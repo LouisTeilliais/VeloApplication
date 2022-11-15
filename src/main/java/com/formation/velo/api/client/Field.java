@@ -41,5 +41,4 @@ public class Field {
     @SerializedName("position")
     private double[] positionVelo;
 
-
 }
