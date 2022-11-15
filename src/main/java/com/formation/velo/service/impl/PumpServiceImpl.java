@@ -70,22 +70,23 @@ public class PumpServiceImpl implements PumpService {
                 if(pump.isPresent()) {
                     pump.get().setLongitude(record.getField().getPosition()[1]);
                     pump.get().setLatitude(record.getField().getPosition()[0]);
-                    pump.get().setUpdateDate(record.getField().getUpdatePrice());
-                    pump.get().setPrice(record.getField().getPrice());
+                    pump.get().setPrix_maj(record.getField().getUpdatePrice());
+                    pump.get().setPrix(record.getField().getPrix());
 
                     add(pump.get());
                 } else {
                     Pump newPump = Pump.builder()
                             .recordId(record.getRecordId())
-                            .reg_name(record.getField().getRegionName())
                             .longitude(record.getField().getPosition()[1])
                             .latitude(record.getField().getPosition()[0])
-                            .price(record.getField().getPrice())
-                            .updateDate(record.getField().getUpdatePrice())
-                            .adress(record.getField().getAdress())
-                            .city(record.getField().getCity())
+                            .prix(record.getField().getPrix())
+                            .prix_maj(record.getField().getUpdatePrice())
+                            .adresse(record.getField().getAdress())
+                            .ville(record.getField().getCity())
                             .services_service(record.getField().getServicesService())
                             .horaires_automate(record.getField().getHorairesAutomate24_24())
+                            .cp(record.getField().getCp())
+                            .carburant(record.getField().getCarburant())
                             .build();
 
                     add(newPump);
